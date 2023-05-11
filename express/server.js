@@ -10,6 +10,10 @@ router.get("/", (req, res) => {
   console.log(req.query.t);
   res.json({ data: req.query.t });
 });
+router.get("/thumbnail", (req, res) => {
+  console.log(req.query.t);
+  res.json({ data: "thumbnail" });
+});
 router.get("/another", (req, res) => res.json({ route: req.originalUrl }));
 router.post("/", (req, res) => res.json({ postBody: req.body }));
 
