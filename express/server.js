@@ -7,14 +7,13 @@ const bodyParser = require("body-parser");
 
 const { generateThumbnail } = require("./thumbnail");
 
-const router = express.Router();
-//router.get("/", generateThumbnail);
+app.get("/thumbnail", generateThumbnail);
 
+const router = express.Router();
 router.get("/", (req, res) => {
-  return res
-    .set("Cache-Control", "public, max-age=3600, s-maxage=10800")
-    .status(200)
-    .json({ result: "ddd" });
+  res.writeHead(200, { "Content-Type": "text/html" });
+  res.write("<h1>Hello from Express. Testing page!</h1>");
+  res.end();
 });
 router.get("/another", (req, res) => res.json({ route: req.originalUrl }));
 router.post("/", (req, res) => res.json({ postBody: req.body }));
