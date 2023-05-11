@@ -7,7 +7,8 @@ const bodyParser = require("body-parser");
 
 const router = express.Router();
 router.get("/", (req, res) => {
-  res.json({ data: "testing" });
+  console.log(req.query.t);
+  res.json({ data: req.query.t });
 });
 router.get("/another", (req, res) => res.json({ route: req.originalUrl }));
 router.post("/", (req, res) => res.json({ postBody: req.body }));
