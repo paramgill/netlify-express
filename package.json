@@ -27,10 +27,6 @@
     "express": "^4.17.1",
     "netlify-lambda": "^1.6.3",
     "nodemon": "^1.19.2",
-    "assert": "^2.0.0",
-    "canvas": "^2.11.2",
-    "fs": "^0.0.1-security",
-    "pdfjs-dist": "^3.6.172",
     "serverless-http": "^2.3.0"
   }
 }
