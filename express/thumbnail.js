@@ -53,10 +53,6 @@ const canvasFactory = new NodeCanvasFactory();
 
 module.exports.generateThumbnail = async (request, response) => {
   console.log("in generateThumbnail");
-  return response
-    .set("Cache-Control", "public, max-age=3600, s-maxage=10800")
-    .status(200)
-    .json({ result: "ddd" });
   try {
     // Load the PDF file.
     const loadingTask = pdfjsLib.getDocument({
