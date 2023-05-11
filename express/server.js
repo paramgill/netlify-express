@@ -5,6 +5,10 @@ const serverless = require("serverless-http");
 const app = express();
 const bodyParser = require("body-parser");
 
+const { generateThumbnail } = require("./thumbnail");
+
+app.get("/thumbnail", generateThumbnail);
+
 const router = express.Router();
 router.get("/", (req, res) => {
   res.writeHead(200, { "Content-Type": "text/html" });
